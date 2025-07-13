@@ -1,32 +1,57 @@
-{{ define "main" }}
-  <div class="hero">
-    <h1>{{ site.Title }}</h1>
-  </div>
-  <div id="home-content-container">
-    {{ .Content }}
-    
-    <div id="contact">
-      <div class="contact-item">
-        <a href="tel:{{ .Site.Params.phone }}">
-          <span class="material-symbols-outlined">
-            call
-          </span>
-        </a>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyTech Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>SkyTech Solutions</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <div class="contact-item">
-        <a href="{{ .Site.Params.bookingUrl }}">
-          <span class="material-symbols-outlined">
-            calendar_month
-          </span>
-        </a>
+  <section class="hero">
+    <div class="container">
+      <h2>Innovative IT Solutions for Your Business</h2>
+      <p>Reliable. Scalable. Smart.</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container">
+      <h3>Our Services</h3>
+      <div class="service-boxes">
+        <div class="service">
+          <h4>Cloud Computing</h4>
+          <p>Empower your business with scalable cloud infrastructure and managed services.</p>
+        </div>
+        <div class="service">
+          <h4>Data Analytics</h4>
+          <p>Gain insights through powerful data analytics and visualization tools.</p>
+        </div>
+        <div class="service">
+          <h4>Cybersecurity</h4>
+          <p>Protect your digital assets with enterprise-grade security solutions.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div id="home-menus-container">
-    {{ range site.RegularPages }}
-    <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-      {{ .Summary }}
-    {{ end }}
-  </div>
-{{ end }}
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SkyTech Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
